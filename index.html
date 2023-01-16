@@ -23,6 +23,14 @@
   </head>
 
   <body>
+    <!-- Modal Window -->
+    <div class="modal is-hidden" data-modal>
+      <div class="window">
+        <button class="close-button" data-modal-close>X</button>
+      </div>
+    </div>
+    <div class="modal is-hidden" data-modal></div>
+    <!-- End Modal Window -->
     <header>
       <nav>
         <div class="header-flex container">
@@ -31,13 +39,22 @@
           >
           <ul class="site-menu">
             <li class="item-menu">
-              <a class="link-menu" href="./index.html">Agencja</a>
+              <div class="highlight-menu">
+                <a class="link-menu" href="./index.html">Agencja</a>
+                <div class="highlight"></div>
+              </div>
             </li>
             <li class="item-menu">
-              <a class="link-menu" href="./portfolio.html">Portfolio</a>
+              <div class="highlight-menu">
+                <a class="link-menu" href="./portfolio.html">Portfolio</a>
+                <div class="highlight"></div>
+              </div>
             </li>
             <li class="item-menu">
-              <a class="link-menu" href="">Kontakt</a>
+              <div class="highlight-menu">
+                <a class="link-menu" href="">Kontakt</a>
+                <div class="highlight"></div>
+              </div>
             </li>
           </ul>
 
@@ -74,7 +91,7 @@
               <h1 class="first-page-title">
                 EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU
               </h1>
-              <button class="first-page-button" type="button">
+              <button data-modal-open class="first-page-button" type="button">
                 Zamów usługę
               </button>
             </div>
@@ -141,28 +158,49 @@
 
           <ul class="list-foto-what-we-do">
             <li class="foto-what-we-do">
-              <img
-                src="./images/img-1.jpg"
-                alt="komputer na biurku"
-                width="370"
-                height="294"
-              />
+              <div class="signature-back">
+                <figure>
+                  <img
+                    src="./images/img-1.jpg"
+                    alt="komputer na biurku"
+                    width="370"
+                    height="294"
+                  />
+                  <figcaption>
+                    <p class="foto-signature">Aplikacje komputerowe</p>
+                  </figcaption>
+                </figure>
+              </div>
             </li>
             <li class="foto-what-we-do">
-              <img
-                src="./images/img-2.jpg"
-                alt="tel kom w dloni"
-                width="370"
-                height="294"
-              />
+              <div class="signature-back">
+                <figure>
+                  <img
+                    src="./images/img-2.jpg"
+                    alt="tel kom w dloni"
+                    width="370"
+                    height="294"
+                  />
+                  <figcaption>
+                    <p class="foto-signature">Aplikacje mobilne</p>
+                  </figcaption>
+                </figure>
+              </div>
             </li>
             <li class="foto-what-we-do">
-              <img
-                src="./images/img-3.jpg"
-                alt="paleta kolorow na malym tablecie"
-                width="370"
-                height="294"
-              />
+              <div class="signature-back">
+                <figure>
+                  <img
+                    src="./images/img-3.jpg"
+                    alt="paleta kolorow na malym tablecie"
+                    width="370"
+                    height="294"
+                  />
+                  <figcaption>
+                    <p class="foto-signature">Rozwiązania graficzne</p>
+                  </figcaption>
+                </figure>
+              </div>
             </li>
           </ul>
         </div>
@@ -495,5 +533,7 @@
         </address>
       </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
